@@ -41,7 +41,7 @@ model Vehiculo {
   marca           String
   modelo          String
   estado          String  @default("disponible")
-  foto            String?
+  foto            String? @db.LongText
   tipoVehiculoId  Int
   tipo            TipoVehiculo  @relation(fields: [tipoVehiculoId], references: [id])
   arriendos       Arriendo[]
